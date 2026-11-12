@@ -1,0 +1,28 @@
+name: Package request
+description: Request a package for Venus OS.
+title: "[Package request]: "
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package name
+      description: Use the upstream or Debian package name if known.
+    validations:
+      required: true
+  - type: textarea
+    id: purpose
+    attributes:
+      label: What is it for?
+      description: Explain the use case and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: source
+    attributes:
+      label: Upstream source
+      description: Optional link to the project or package documentation.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Include architecture, dependency, or packaging considerations.

@@ -1,0 +1,44 @@
+name: Repository or package problem
+description: Report an issue with a Venus OS package or APT repository.
+title: "[APT]: "
+body:
+  - type: input
+    id: package
+    attributes:
+      label: Package name and version
+      description: If applicable, include the exact package version.
+    validations:
+      required: true
+  - type: input
+    id: debian
+    attributes:
+      label: Debian release
+      description: For example, Debian 13 (Trixie).
+    validations:
+      required: true
+  - type: input
+    id: architecture
+    attributes:
+      label: System architecture
+      placeholder: amd64, arm64, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the exact command and error message when possible.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant APT output
+      description: Remove passwords, tokens, and other sensitive information before posting.
+      render: text
